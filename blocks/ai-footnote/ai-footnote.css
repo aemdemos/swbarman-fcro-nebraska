@@ -1,0 +1,46 @@
+
+.ai-footnote-wrapper {
+  border-top: 2px solid #a7c5d3; /* Adjust the color to match the thin horizontal line */
+  padding-top: 10px; /* Add some padding to create space between the border and the content */
+  text-align: center; /* Center the content horizontally */
+}
+
+.ai-footnote {
+  display: flex;
+  justify-content: center; /* Center the content horizontally */
+  align-items: center; /* Center the content vertically */
+}
+
+.ai-footnote > div {
+  display: flex;
+  align-items: center; /* Center the content vertically */
+  flex-direction: row; /* Ensure content is side by side */
+}
+
+.ai-footnote p {
+  margin: 0; /* Remove default paragraph margin */
+  display: flex;
+  align-items: center; /* Center the content vertically */
+  flex-direction: row; /* Ensure content is side by side */
+}
+
+.ai-footnote a {
+  color: #005a80; /* Adjust the link color to match the provided image */
+  text-decoration: none; /* Remove underline from links */
+  margin: 0 5px; /* Space between the links and the separator */
+}
+
+.ai-footnote a:first-child {
+  margin-left: 0; /* Remove margin before the first link */
+}
+
+.ai-footnote p a::after {
+  content: '|';
+  display: inline-block;
+  margin-left: 5px;
+  color: #005a80; /* Color of the vertical separator */
+}
+
+.ai-footnote p a:last-child::after {
+  content: none; /* Remove separator after the last link */
+}

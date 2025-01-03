@@ -1,0 +1,70 @@
+
+.ai-hero-wrapper {
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding: 0;
+  max-width: unset;
+}
+
+.ai-hero {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.ai-hero > div:first-child {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.ai-hero > div:first-child picture,
+.ai-hero > div:first-child img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.ai-hero > div:nth-child(2) {
+  position: absolute;
+  top: 10px; /* Adjust top position to align with original image */
+  left: 10px; /* Adjust left position to align with original image */
+  right: 10px; /* Adjust right position to align with original image */
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.5); /* Semi-transparent background */
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  z-index: 1; /* Ensure text overlay is above the image */
+}
+
+.ai-hero h6, .ai-hero p {
+  margin: 0;
+  padding: 5px 0; /* Adjust padding for better spacing */
+  line-height: 1.6; /* Adjust line height for better readability */
+}
+
+.ai-hero picture {
+  display: none; /* Hide additional images within text content */
+}
+
+@media (min-width: 600px) {
+  .ai-hero {
+    display: flex;
+    flex-direction: column; /* Ensure elements are stacked */
+  }
+  
+  .ai-hero > div:first-child {
+    flex: 1;
+    order: 1;
+  }
+  
+  .ai-hero > div:nth-child(2) {
+    flex: 1;
+    order: 2;
+  }
+}

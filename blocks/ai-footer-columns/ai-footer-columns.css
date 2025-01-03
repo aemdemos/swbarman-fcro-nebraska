@@ -1,0 +1,88 @@
+
+/* Set the background color and padding for the outer wrapper */
+.ai-footer-columns-wrapper {
+  background-color: #005a72; /* Use the same blue background color as in the original image */
+  padding: 20px;
+  color: white; /* Ensure the text is readable against the background */
+}
+
+/* Use Flexbox to align the two inner divs side-by-side */
+.ai-footer-columns-wrapper .ai-footer-columns > div {
+  display: flex;
+  flex-direction: row; /* Arrange children side-by-side */
+  justify-content: space-between; /* Space out the columns */
+  align-items: flex-start; /* Align items to the start of the flex container */
+}
+
+/* Style the left column with the image and text */
+.ai-footer-columns-wrapper .ai-footer-columns > div > div:first-child {
+  display: flex;
+  flex-direction: column; /* Stack the image and text vertically */
+  align-items: flex-start; /* Align items to the start of the flex container */
+  margin-right: 20px; /* Add some space to the right */
+}
+
+/* Ensure the image is appropriately sized and not stretched */
+.ai-footer-columns-wrapper .ai-footer-columns img {
+  width: auto; /* Maintain original image dimensions */
+  max-width: 100%; /* Ensure it doesn't exceed container width */
+  margin-bottom: 10px; /* Add some space below the image */
+}
+
+/* Text block next to the image in the left column */
+.ai-footer-columns-wrapper .ai-footer-columns > div > div:first-child p {
+  margin: 0;
+}
+
+/* Ensure the right column is aligned properly */
+.ai-footer-columns-wrapper .ai-footer-columns > div > div:last-child {
+  display: flex;
+  flex-direction: column; /* Stack the contact info and icons vertically */
+  align-items: flex-start; /* Align items to the start of the flex container */
+}
+
+/* Add some spacing between the elements in the right column */
+.ai-footer-columns-wrapper .ai-footer-columns > div > div:last-child > p {
+  display: flex;
+  flex-direction: row; /* Arrange icon and text side-by-side */
+  align-items: center; /* Center align icon and text */
+  margin-bottom: 5px; /* Reduce spacing between contact info rows */
+}
+
+/* Ensure the images within the right column are aligned with the text */
+.ai-footer-columns-wrapper .ai-footer-columns > div > div:last-child picture {
+  margin-right: 10px; /* Add some space to the right of the images */
+  vertical-align: middle; /* Align images with the middle of the text */
+}
+
+/* Adjust the font sizes for better readability */
+.ai-footer-columns-wrapper .ai-footer-columns > div > div p {
+  font-size: 14px; /* Adjust font size if necessary */
+}
+
+.ai-footer-columns-wrapper .ai-footer-columns > div > div p strong {
+  font-size: 16px; /* Make the title slightly larger */
+}
+
+/* Ensure consistent behavior across all screen sizes */
+@media (min-width: 900px) {
+  .ai-footer-columns-wrapper .ai-footer-columns > div {
+    align-items: flex-start;
+    flex-direction: row; /* Ensure children are side-by-side */
+    gap: 24px;
+  }
+
+  .ai-footer-columns-wrapper .ai-footer-columns > div > div {
+    flex: 1;
+    order: unset;
+  }
+}
+
+/* Ensure consistent spacing and alignment for contact information */
+.ai-footer-columns-wrapper .ai-footer-columns > div > div:last-child a {
+  color: white; /* Ensure contact links are white */
+}
+
+.ai-footer-columns-wrapper .ai-footer-columns > div > div:last-child a:hover {
+  color: #cce6ff; /* Add hover color for contact links */
+}

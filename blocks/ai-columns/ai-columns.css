@@ -1,0 +1,114 @@
+
+.ai-columns-wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 24px; /* Space between columns */
+}
+
+.ai-columns-wrapper .ai-columns {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.ai-columns-wrapper .ai-columns > div {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.ai-columns-wrapper .ai-columns > div:first-child {
+  flex: 2;
+  padding-right: 20px;
+  flex-direction: column; /* Ensure the main content is a column */
+}
+
+.ai-columns-wrapper .ai-columns > div:last-child {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Space between elements */
+}
+
+/* Sidebar elements with distinct background colors and padding */
+.ai-columns-wrapper .ai-columns > div:last-child > div {
+  background-color: #f0f0f0; /* Example background color */
+  padding: 20px;
+  border-radius: 5px;
+  margin-bottom: 20px; /* Space between sidebar elements */
+}
+
+/* Sidebar blocks with background colors and padding */
+.ai-columns-wrapper .ai-columns > div:last-child > p {
+  background-color: #f0f0f0; /* Example background color */
+  padding: 20px;
+  border-radius: 5px;
+  margin-bottom: 20px; /* Space between sidebar elements */
+}
+
+/* Sidebar buttons */
+.ai-columns-wrapper .button-container {
+  margin-top: 20px;
+}
+
+/* Styling for social media icons (assuming they are in a list) */
+.ai-columns-wrapper .social-icons {
+  display: flex;
+  gap: 10px; /* Space between icons */
+  justify-content: center;
+}
+
+/* Footer section with image and text */
+.ai-columns-wrapper .footer-section {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Space between image and text */
+  flex-direction: row; /* Ensure image and text are side by side */
+}
+
+/* Image in the footer */
+.ai-columns-wrapper .footer-section img {
+  max-width: 100px; /* Adjust as needed */
+  height: auto;
+}
+
+/* Override button styles */
+.ai-columns-wrapper .button {
+  box-sizing: border-box;
+  display: inline-block;
+  max-width: 100%;
+  margin: 12px 0;
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  padding: 0.5em 1.2em;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  text-align: center;
+  text-decoration: none;
+  background-color: var(--link-color);
+  color: var(--background-color);
+  cursor: pointer;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.ai-columns-wrapper .button:hover,
+.ai-columns-wrapper .button:focus {
+  background-color: var(--link-hover-color);
+  cursor: pointer;
+}
+
+.ai-columns-wrapper .button:disabled,
+.ai-columns-wrapper .button:disabled:hover {
+  background-color: var(--light-color);
+  cursor: unset;
+}
+
+.ai-columns-wrapper .button.secondary {
+  background-color: unset;
+  border: 2px solid currentcolor;
+  color: var(--text-color);
+}
